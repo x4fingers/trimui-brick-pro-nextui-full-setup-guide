@@ -13,7 +13,7 @@
 
 ## Install games
 
-## Portmaster
+### Portmaster
 
 If you need to play ported old PC games, you need install [Portmaster](https://portmaster.games) from **Pak Store > Emulators**.
 
@@ -23,49 +23,53 @@ Steps:
 - Step 2.1: If it was **Ready to run** games, nothing needs to be done.
 - Step 2.2: If it was **File needed** games, you need to find game files yourself from Steam, GOG, or other sources.
 
-### Game download sources
+#### Game download sources
 
 For people who can't purchase to get **File needed** games's folder
 
-| Source                                                                          | Description |
-| ------------------------------------------------------------------------------- | ----------- |
+| Source                                                                          | Description                                          |
+| ------------------------------------------------------------------------------- | ---------------------------------------------------- |
 | [Portmaster ports 202405](https://archive.org/download/portmaster_ports_202405) | Common Portmaster game files, last updated: May 2024 |
+| Steam RIP                                                                       | A source for Steam game data files                   |
+| GOG Unlocked                                                                    | A source for GOG game data files                     |
+| FitGirl Repacks                                                                 | Current status: no accessible                        |
 
 Note:
 
 - Be patient. On first run, it shouldn't work because of different file structure of NextUI and this source not configured for NextUI.
 - Only use official `.sh` file from Portmaster, don't use outdated `.sh` file from this download source, only take game files then copy to game data folder.
+- Some patches required only Windows or Linux game data folder, read instructions carefully before download games.
 - If you are not an advanced user (developer, OS/game builder, ...), an AI Agent (Claude Code, Codex, ...) may help you setup games correctly on SD card.
 
-### Recommended games
+#### Recommended games
 
 - GTA Vice City
 - GTA 3
-- Doom 3
 - Stardew Valley
 - Half-Life
 
-## PS, PSP and others platforms
+### PS, PSP and other platforms
 
 Install required emulators from **Pak Store > Emulators**
 
-By default, prebuilt emulators on NextUI can run most almost games. But some game may required a BIOS file to make it work properly.
+By default, prebuilt emulators on NextUI can run almost games. But some game may required a BIOS file to make it work properly.
 
 Steps:
 
-1. Install emulator from Pak first
-2. Download games BIOS and ROM files then copy to correct folder.
+1. Download games BIOS and ROM files.
+2. Copy BIOS files to `Bios/<emualtor_name>` folder.
+3. Copy ROM files to `Roms/<emualtor_name>` folder.
 
-### Game download sources
+#### Game download sources
 
-| Source                                                                                   | Description                                                                     |
-| ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| [Minimal set retro collection](https://archive.org/details/minimal-set-retro-collection) | Almost ready to run game you need here. I tested many games and it should work. |
-| [TOPO game library](https://game.toposhop.vn) | A library contributed by Vietnamese retro gamers community. Not all games will work but just try anyway. |
+| Source                                                                                   | Description                                                                                              |
+| ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| [Minimal set retro collection](https://archive.org/details/minimal-set-retro-collection) | Almost ready to run game you need here. I tested many games and it should work.                          |
+| [TOPO game library](https://game.toposhop.vn)                                            | A library contributed by Vietnamese retro gamers community. Not all games will work but just try anyway. |
 
-### Recommended games
+#### Recommended games
 
-#### Individual games
+**Individual games**
 
 - Slient Hill
 - Spider-Man
@@ -76,7 +80,7 @@ Steps:
 - Zombie Ate My Neighbors
 - Tank 90
 
-#### Series
+**Series**
 
 - Contra series
 - Bomberman series
@@ -103,6 +107,8 @@ I won't provide a guide for installing apps on NextUI. Because of 3 reasons:
 | Issue                                                                                                                                            | Fix                                                                                                                       |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- |
 | Some Portmaster game should configured correct resolution for this device, otherwise game may not run properly. Example: GTA Vice City and GTA 3 | Edit `reVC.ini`/`re3.ini` file, change from `Width=640 Height=480` to `Width=1024 Height=768` to match device resolution. |
+| Doom 3 can't start new game, freeze on loading screen. If disabled audio, game can start but will freeze again.                                  | No fix yet. Audio driver issue and performance isssue.                                                                    |
+| Can't run Forager (only support Linux version up to v2.0.4, newer version deprecated)                                                            | No fix yet. TrimUI CFW doesn't has 32-bit ARM compability layer at OS level                                               |
 
 ### Unresolved issues
 
